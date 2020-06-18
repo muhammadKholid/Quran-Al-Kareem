@@ -5,7 +5,7 @@ import {
   GET_RANDOM_AYAH,
   GET_CITY_CODE,
   GET_ADZAN_SCHEDULE,
-} from '../actions/Types';
+} from "../actions/Types"
 
 const initialState = {
   allSurah: [],
@@ -14,30 +14,30 @@ const initialState = {
   randomAyah: null,
   cityCode: null,
   adzanSchedule: null,
-};
+}
 
 const reducers = (state = initialState, action) => {
   switch (action.type) {
     case GET_ALL_SURAH:
-      return { ...state, allSurah: action.payload };
+      return { ...state, allSurah: action.payload }
 
     case GET_ALL_AYAH:
-      return { ...state, allAyah: action.payload };
+      return { ...state, allAyah: action.payload }
 
     case GET_ONE_AYAH:
-      return { ...state, oneAyah: action.payload };
+      return { ...state, oneAyah: action.payload }
 
     case GET_RANDOM_AYAH:
-      return { ...state, randomAyah: action.payload };
+      return { ...state, randomAyah: action.payload }
 
     case GET_CITY_CODE:
-      return { ...state, cityCode: action.payload };
+      return { ...state, cityCode: action.payload }
 
     case GET_ADZAN_SCHEDULE:
-      return { ...state, adzanSchedule: action.payload };
+      return { ...state, adzanSchedule: action.payload }
 
     default:
   }
-};
+}
 
-export default reducers;
+export default reducers

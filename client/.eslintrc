@@ -1,0 +1,21 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true
+  },
+  "plugins": ["import"],
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "parser":"babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "no-eval": "warn",
+    "import/first": "warn"
+  }
+}
