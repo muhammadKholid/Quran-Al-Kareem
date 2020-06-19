@@ -17,11 +17,11 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/quran/:surah">
-            <Surah />
-          </Route>
-          <Route path="/quran">
+          <Route path="/surah/quran">
             <Quran />
+          </Route>
+          <Route path="/surah">
+            <Surah />
           </Route>
         </Switch>
       </Router>

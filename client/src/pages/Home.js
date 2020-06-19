@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
 import { getAdzanSchedule, getAsmaulHusna } from "../stores/actions/Action"
@@ -72,13 +73,17 @@ export default function Home() {
             <div className="item">
               <img src={asmaul} alt="Al Quran" />
               <div className="item-title">
-                <h4>Asmaul Husna</h4>
+                <Link to="/asmaul-husna">
+                  <h4>Asmaul Husna</h4>
+                </Link>
               </div>
             </div>
             <div className="item">
               <img src={kitab} alt="asmaul husna" />
               <div className="item-title">
-                <h4>Al-Quran</h4>
+                <Link to="/surah">
+                  <h4>Al-Quran</h4>
+                </Link>
               </div>
             </div>
           </div>

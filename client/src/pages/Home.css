@@ -17,127 +17,132 @@
   margin: 0;
 }
 
-/* .App .container .sub-container { */
-/*   min-height: 100vh; */
-/*   background-image: url("../assets/step_12.jpg"); */
-/*   background-size: cover; */
-/*   padding: 3vh; */
-/*   position: relative; */
-/* } */
+.App .container .sub-container {
+  min-height: 90vh;
+  background-image: url("../assets/step_12.jpg");
+  background-size: cover;
+  padding: 3vh;
+  position: relative;
+}
 
-/* .adzanSchedule { */
-/*   display: flex; */
-/*   flex-wrap: wrap; */
-/*   justify-content: space-around; */
-/*   align-items: center; */
-/*   border-top: 2px solid var(--dark); */
-/* } */
+.App .container .sub-container .header .header-title h2 {
+  margin: 2vh 0;
+  border-bottom: 2px solid var(--dark);
+  font-size: 2.3rem;
+  width: 22vw;
+}
 
-/* .App .adzanSchedule .schedule { */
-/*   border-radius: 12px; */
-/*   width: 19vw; */
-/*   height: 8vh; */
-/*   color: var(--dark); */
-/* } */
+.App .container .sub-container .header {
+  margin: 2vh 0;
+  position: relative;
+}
 
-/* .App .adzanSchedule .schedule h2 { */
+.adzanSchedule {
+  width: 10vw;
+  position: absolute;
+  padding-right: 0.5rem;
+  right: 0;
+  border-right: 2px solid var(--dark);
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
-/*   margin: 1rem 1rem .5rem 1rem; */
-/*   font-size: 1.7rem; */
-/* } */
+.App .schedule {
+  padding: 1rem;
+  border-radius: 12px;
+  width: 7vw;
+  height: 8vh;
+  color: var(--white);
+}
 
-/* .App  .adzanSchedule .schedule p { */
-/*   margin: 0 1rem; */
-/*   font-size: 1.3rem; */
-/* } */
+.App .schedule h2 {
+  margin: 0;
+  font-size: 1rem;
+}
 
-/* .App .container .sub-container .header { */
-/*   margin: 2vh 0; */
-/*   position: relative; */
-/* } */
-/* .App .container .sub-container .header .header-title h2 { */
-/*   position: absolute; */
-/*   left: 50vw; */
-/*   top: 30vh; */
-/*   margin: 2vh 0; */
-/* } */
+.App .schedule p {
+  margin: 0;
+  font-size: 1.1rem;
+}
 
-/* .App .container .sub-container .header .random { */
-/*   position: absolute; */
-/*   top: 20vh; */
-/*   width: 30vw; */
-/*   height: auto; */
-/* } */
-/* .App .container .sub-container .header .random h2, */
-/* .mean { */
-/*   margin: 0; */
-/*   color: var(--white); */
-/* } */
+.App .container .sub-container .header .random {
+  position: absolute;
+  top: 20vh;
+  width: 30vw;
+  height: auto;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
-/* .row { */
-/*   border-top-left-radius: 15px; */
-/*   border-top-right-radius: 15px; */
-/*   background-color: #001938; */
-/*   background-size: cover; */
-/*   position: absolute; */
-/*   width: 100%; */
-/*   top: 65%; */
-/*   min-height: 45vh; */
-/* } */
+.App .container .sub-container .header .random h2,
+.mean {
+  margin: 0 0 0.5rem 0;
+  color: var(--white);
+  font-size: 1.8rem;
+}
 
-/* .row .navigation { */
-/*   margin: 1vh 2vh 2vh 2vh; */
-/*   padding: 3vh 3vw 3vh 3vw; */
-/*   display: grid; */
-/*   grid-template-columns: 1fr 1fr; */
-/*   grid-gap: 0.5rem; */
-/*   justify-items: center; */
-/* } */
+.row {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #001938;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  min-height: 65vh;
+}
 
-/* .row .navigation .item { */
-/*   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
-/*   background-color: var(--light-dark); */
-/*   width: 23vh; */
-/*   height: 23vh; */
-/*   position: relative; */
-/*   border-radius: 12px; */
-/* } */
+.row .navigation {
+  margin: 3vh 2vh 2vh 2vh;
+  padding: 3vh 3vw 3vh 3vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+  justify-items: center;
+}
 
-/* .row .navigation .item img { */
-/*   display: block; */
-/*   width: 100%; */
-/*   border-radius: 12px; */
-/* } */
+.row .navigation .item {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: var(--light-dark);
+  width: 48vh;
+  height: 48vh;
+  position: relative;
+  border-radius: 12px;
+}
 
-/* .row .navigation .item .item-title { */
-/*   position: absolute; */
-/*   left: 0; */
-/*   right: 0; */
-/*   top: 0; */
-/*   bottom: 0; */
-/*   background-color: rgba(0, 0, 0, 0.8); */
-/*   display: none; */
-/*   flex-wrap: wrap; */
-/*   align-items: center; */
-/*   justify-content: center; */
-/* } */
+.row .navigation .item img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
 
-/* .row .navigation .item:hover .item-title { */
-/*   display: flex; */
-/*   border-radius: 12px; */
-/* } */
+.row .navigation .item .item-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 
-/* .row .navigation .item .item-title h4 { */
-/*   height: 1rem; */
-/*   width: auto; */
-/*   font-size: 1rem; */
-/*   font-weight: 700; */
-/*   color: var(--white); */
-/*   animation: galeryText 0.8s ease; */
-/*   cursor: pointer; */
-/* } */
-/*batas*/
-/* @media (min-width: 320px) and (max-width: 480px) */
+.row .navigation .item:hover .item-title {
+  display: flex;
+  border-radius: 12px;
+}
+
+.row .navigation .item .item-title h4 {
+  height: 1rem;
+  width: auto;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  animation: galeryText 0.8s ease;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 640px) {
   .App .container .sub-container {
     min-height: 65vh;
@@ -149,6 +154,8 @@
 
   .App .container .sub-container .header .header-title h2 {
     margin: 2vh 0;
+    font-size: 1.6rem;
+    width: 44vw;
   }
 
   .App .container .sub-container .header {
@@ -157,16 +164,18 @@
   }
 
   .adzanSchedule {
+    width: 20vw;
     position: absolute;
     right: 0;
     border-right: 2px solid var(--dark);
   }
 
   .App .schedule {
+    padding: 0.5rem;
     border-radius: 12px;
-    width: 19vw;
+    width: 13vw;
     height: 8vh;
-    color: var(--dark);
+    color: var(--white);
   }
 
   .App .schedule h2 {
@@ -189,6 +198,7 @@
   .mean {
     margin: 0;
     color: var(--white);
+    font-size: 1.1rem;
   }
 
   .row {
