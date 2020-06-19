@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
-import { getCityCode, getAdzanSchedule } from "../stores/actions/Action"
+import { getAdzanSchedule, getAsmaulHusna } from "../stores/actions/Action"
 
 import "./Home.css"
 
@@ -11,12 +11,20 @@ import asmaul from "../assets/Islamic_Wall_Decal_Art_of_Surah_Ikhlas_in_Square_K
 export default function Home() {
   const [loading, setLoading] = useState("loading")
   const dispatch = useDispatch()
-  const { adzanSchedule } = useSelector((state) => state.Reducer)
+  const { adzanSchedule, asmaulHusna } = useSelector((state) => state.Reducer)
+
+  function getNumber() {
+    const generateNumber = Math.floor(Math.random() * 99)
+    return generateNumber
+  }
+
+  function calledOnce() {
+    dispatch(getAsmaulHusna())
+    dispatch(getAdzanSchedule())
+  }
 
   useEffect(() => {
-    // const city = "jakarta"
-    // dispatch(getCityCode(city))
-    dispatch(getAdzanSchedule())
+    calledOnce()
   }, [dispatch])
 
   return (
@@ -49,10 +57,14 @@ export default function Home() {
             <div className="header-title">
               <h2>Islamic Center</h2>
             </div>
-            <div className="random">
-              <h2>Allah</h2>
-              <p className="mean">Tuhanku</p>
-            </div>
+            {asmaulHusna[getNumber()] ? (
+              <div className="random">
+                <h2>{asmaulHusna[getNumber()].arab}</h2>
+                <p className="mean">{asmaulHusna[getNumber()].arti}</p>
+              </div>
+            ) : (
+              loading
+            )}
           </div>
         </div>
         <div className="row">

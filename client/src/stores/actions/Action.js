@@ -8,16 +8,14 @@ import {
   GET_ASMAUL_HUSNA,
 } from "./Types"
 
+import asmaAllah from "../../assets/AsmaulHusna"
+
 export const getAsmaulHusna = () => {
   return (dispatch, _) => {
-    fetch("../../assets/AsmaulHusna.json")
-      .then((res) => res.json())
-      .then((asmaulHusna) => {
-        dispatch({
-          type: GET_ASMAUL_HUSNA,
-          payload: asmaulHusna,
-        })
-      })
+    dispatch({
+      type: GET_ASMAUL_HUSNA,
+      payload: asmaAllah,
+    })
   }
 }
 
