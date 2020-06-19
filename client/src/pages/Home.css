@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
+
+:root {
+  --dark: #222831;
+  --light-dark: #393e46;
+  --orange: #fd7014;
+  --white: #eeeeee;
+}
+
+.App {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: 0;
+}
+
+.App .container .sub-container {
+  min-height: 60vh;
+  background-image: url("../assets/red-paper-airplane-fly-dark-blue-background_44481-304.jpg");
+  background-size: cover;
+  padding: 3vh;
+  position: relative;
+}
+
+.App .container .sub-container .header .header-title h2 {
+  margin: 2vh 0;
+}
+
+.adzanSchedule {
+  width: 15vw;
+  border-left: 2px solid var(--dark);
+  padding-left: 1rem;
+}
+
+.App .schedule {
+  border-radius: 12px;
+  width: 29vw;
+  height: 8vh;
+  color: var(--dark);
+}
+
+.App .schedule h2 {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.App .schedule p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.row {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #001938;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  top: 65%;
+  min-height: 35vh;
+}
+
+.row .navigation {
+  margin: 1vh 2vh 2vh 2vh;
+  padding: 3vh 3vw 3vh 3vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+  justify-items: center;
+}
+
+.row .navigation .item {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: var(--light-dark);
+  width: 23vh;
+  height: 23vh;
+  position: relative;
+  border-radius: 12px;
+}
+
+.row .navigation .item img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.row .navigation .item .item-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.row .navigation .item:hover .item-title {
+  display: flex;
+  border-radius: 12px;
+}
+
+.row .navigation .item .item-title h4 {
+  height: 1rem;
+  width: auto;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  animation: galeryText 0.8s ease;
+  cursor: pointer;
+}

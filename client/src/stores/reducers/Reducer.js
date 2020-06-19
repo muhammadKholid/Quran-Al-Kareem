@@ -5,11 +5,13 @@ import {
   GET_RANDOM_AYAH,
   GET_CITY_CODE,
   GET_ADZAN_SCHEDULE,
+  GET_ASMAUL_HUSNA,
 } from "../actions/Types"
 
 const initialState = {
   allSurah: [],
   allAyah: [],
+  asmaulHusna: [],
   oneAyah: null,
   randomAyah: null,
   cityCode: null,
@@ -18,6 +20,9 @@ const initialState = {
 
 const reducers = (state = initialState, action) => {
   switch (action.type) {
+    case GET_ASMAUL_HUSNA:
+      return { ...state, asmaulHusna: action.payload }
+
     case GET_ALL_SURAH:
       return { ...state, allSurah: action.payload }
 
@@ -37,6 +42,7 @@ const reducers = (state = initialState, action) => {
       return { ...state, adzanSchedule: action.payload }
 
     default:
+      return state
   }
 }
 

@@ -5,9 +5,23 @@ import {
   GET_RANDOM_AYAH,
   GET_CITY_CODE,
   GET_ADZAN_SCHEDULE,
+  GET_ASMAUL_HUSNA,
 } from "./Types"
 
-export const getAdzanSchedule = (cityCode) => {
+export const getAsmaulHusna = () => {
+  return (dispatch, _) => {
+    fetch("../../assets/AsmaulHusna.json")
+      .then((res) => res.json())
+      .then((asmaulHusna) => {
+        dispatch({
+          type: GET_ASMAUL_HUSNA,
+          payload: asmaulHusna,
+        })
+      })
+  }
+}
+
+export const getAdzanSchedule = (cityCode = 667) => {
   return (dispatch, _) => {
     fetch(
       `https://api.banghasan.com/sholat/format/json/jadwal/kota/${cityCode}/tanggal/${
@@ -30,7 +44,7 @@ export const getCityCode = (city) => {
     fetch(`https://api.banghasan.com/sholat/format/json/kota/nama/${city}`)
       .then((res) => res.json())
       .then((cityCode) => {
-        const code = cityCode.kota.id
+        const code = cityCode.kota[0].id
         dispatch({
           type: GET_CITY_CODE,
           payload: code,
