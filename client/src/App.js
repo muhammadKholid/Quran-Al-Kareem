@@ -8,6 +8,7 @@ import store from "./stores/index"
 import Home from "./pages/Home"
 import Quran from "./pages/Quran"
 import Surah from "./pages/Surah"
+import Asma from "./pages/99"
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/surah">
             <Surah />
+          </Route>
+          <Route path="/asmaul-husna">
+            <Asma />
           </Route>
         </Switch>
       </Router>

@@ -22,8 +22,8 @@ export default function Quran() {
         <div className="ayah">
           {allAyah
             ? allAyah.map((el, i) => (
-                <div dir="rtl" key={i} className="per-ayah">
-                  <h4 className="arab">
+                <div key={i} className="per-ayah">
+                  <h4 dir="rtl" className="arab">
                     {el.ar}
                     &nbsp;<small>{i + 1}</small>
                   </h4>

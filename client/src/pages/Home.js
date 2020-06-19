@@ -11,6 +11,7 @@ import asmaul from "../assets/Islamic_Wall_Decal_Art_of_Surah_Ikhlas_in_Square_K
 
 export default function Home() {
   const [loading] = useState("loading")
+  const [rundomNumber, setRundomNumber] = useState(0)
   const dispatch = useDispatch()
   const { adzanSchedule, asmaulHusna } = useSelector((state) => state.Reducer)
 
@@ -22,6 +23,7 @@ export default function Home() {
   function calledOnce() {
     dispatch(getAsmaulHusna())
     dispatch(getAdzanSchedule())
+    setRundomNumber(getNumber())
   }
 
   useEffect(() => {
@@ -58,10 +60,10 @@ export default function Home() {
             <div className="header-title">
               <h2>Islamic Center</h2>
             </div>
-            {asmaulHusna[getNumber()] ? (
+            {asmaulHusna[rundomNumber] ? (
               <div className="random">
-                <h2>{asmaulHusna[getNumber()].arab}</h2>
-                <p className="mean">{asmaulHusna[getNumber()].arti}</p>
+                <h2 dir="rlt">{asmaulHusna[rundomNumber].arab}</h2>
+                <p className="mean">{asmaulHusna[rundomNumber].arti}</p>
               </div>
             ) : (
               loading
