@@ -17,8 +17,8 @@
 }
 
 .App .container .sub-container {
-  min-height: 60vh;
-  background-image: url("../assets/red-paper-airplane-fly-dark-blue-background_44481-304.jpg");
+  min-height: 65vh;
+  background-image: url("../assets/step_12.jpg");
   background-size: cover;
   padding: 3vh;
   position: relative;
@@ -28,10 +28,17 @@
   margin: 2vh 0;
 }
 
+.App .container .sub-container .header {
+  margin: 2vh 0;
+  position: relative;
+}
+
 .adzanSchedule {
+  position: absolute;
   width: 15vw;
-  border-left: 2px solid var(--dark);
-  padding-left: 1rem;
+  right: 0;
+  border-right: 2px solid var(--dark);
+  padding-right: 1rem;
 }
 
 .App .schedule {
@@ -49,6 +56,18 @@
 .App .schedule p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+.App .container .sub-container .header .random {
+  position: absolute;
+  top: 20vh;
+  width: 30vw;
+  height: auto;
+}
+.App .container .sub-container .header .random h2,
+.mean {
+  margin: 0;
+  color: var(--white);
 }
 
 .row {

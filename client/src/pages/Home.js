@@ -24,9 +24,6 @@ export default function Home() {
       <div className="container">
         <div className="sub-container">
           <div className="header">
-            <div className="header-title">
-              <h2>Islamic Center</h2>
-            </div>
             <div className="adzanSchedule">
               <div className="schedule">
                 <h2>{adzanSchedule ? adzanSchedule.subuh : loading}</h2>
@@ -48,6 +45,13 @@ export default function Home() {
                 <h2>{adzanSchedule ? adzanSchedule.isya : loading}</h2>
                 <p>Isya</p>
               </div>
+            </div>
+            <div className="header-title">
+              <h2>Islamic Center</h2>
+            </div>
+            <div className="random">
+              <h2>Allah</h2>
+              <p className="mean">Tuhanku</p>
             </div>
           </div>
         </div>
