@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
 import { getAllSurah } from "../stores/actions/Action"
+
+import List from "../components/List"
 
 import "./Surah.css"
 
@@ -31,15 +32,14 @@ export default function Quran() {
           </div>
           {allSurah
             ? allSurah.map((el, i) => (
-                <Link to="/surah/quran">
-                  <div dir="rtl" className="surah">
-                    <h4 className="nomor">{el.nomor}</h4>
-                    <h4>{el.asma}</h4>
-                    <h4 className="nomor">{el.arti}</h4>
-                    <h4 className="nomor">{el.ayat}</h4>
-                    <h4 className="nomor">{el.type}</h4>
-                  </div>
-                </Link>
+                <List
+                  key={i}
+                  nomor={el.nomor}
+                  surat={el.asma}
+                  arti={el.arti}
+                  ayat={el.ayat}
+                  tipe={el.type}
+                />
               ))
             : loading}
         </div>

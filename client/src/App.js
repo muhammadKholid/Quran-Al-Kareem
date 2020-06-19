@@ -17,7 +17,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/surah/quran">
+          <Route path="/surah/:quran">
             <Quran />
           </Route>
           <Route path="/surah">

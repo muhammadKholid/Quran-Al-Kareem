@@ -33,7 +33,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Quran Standard";
   font-size: 1.5rem;
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--light-orange);
@@ -42,6 +41,7 @@
 }
 
 .surah-container .container .list-surah .title h4 {
+  font-family: "Quran Standard";
   margin: 1rem 1rem;
 }
 
@@ -87,4 +87,15 @@
   font-weight: 500;
   font-size: 1rem;
   margin: 0;
+}
+
+@media only screen and(max-width: 640px) {
+  .surah-container .container .list-surah .surah h4 {
+    font-size: 1rem;
+  }
+
+  .surah-container .container .list-surah .surah .nomor {
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
 }
