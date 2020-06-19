@@ -10,7 +10,7 @@ import kitab from "../assets/reading-quran-nigth-ramadhan-illustration_19181-27.
 import asmaul from "../assets/Islamic_Wall_Decal_Art_of_Surah_Ikhlas_in_Square_Kufic__17267.1440393611.300.300.jpg"
 
 export default function Home() {
-  const [loading, setLoading] = useState("loading")
+  const [loading] = useState("loading")
   const dispatch = useDispatch()
   const { adzanSchedule, asmaulHusna } = useSelector((state) => state.Reducer)
 
@@ -26,7 +26,7 @@ export default function Home() {
 
   useEffect(() => {
     calledOnce()
-  }, [dispatch])
+  }, [asmaulHusna])
 
   return (
     <div className="App">

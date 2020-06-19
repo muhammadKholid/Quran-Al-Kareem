@@ -1,0 +1,90 @@
+@import url(//db.onlinewebfonts.com/c/f4c0d87f5d87871985ef7c13105fd688?family=Quran + Standard);
+
+:root {
+  --dark: #222831;
+  --light-dark: #393e46;
+  --orange: #fd7014;
+  --white: #eeeeee;
+  --dark-navy: #001938;
+  --light-orange: #ffefbe;
+}
+
+.surah-container {
+  margin: 0;
+  background-color: var(--dark-navy);
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.surah-container .container {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.surah-container .container .list-surah {
+  margin-top: 1rem;
+  background-color: var(--light-orange);
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.surah-container .container .list-surah .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quran Standard";
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--light-orange);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.surah-container .container .list-surah .title h4 {
+  margin: 1rem 1rem;
+}
+
+.surah-container .container .list-surah .head-table {
+  margin-bottom: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--light-orange);
+  padding: 1.5rem;
+  height: 2vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.surah-container .container .list-surah .head-table h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.surah-container .container .list-surah .surah {
+  margin-bottom: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  height: 2vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.surah-container .container .list-surah .surah h4 {
+  font-family: "Quran Standard";
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.surah-container .container .list-surah .surah .nomor {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+}
