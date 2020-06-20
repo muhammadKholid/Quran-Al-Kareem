@@ -20,11 +20,17 @@ export default function AsmaulHusna() {
         <div className="title">
           <h2> بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْ</h2>
         </div>
-        <div className="sub-container">
+        <div dir="rtl" className="sub-container">
           {asmaulHusna
             ? asmaulHusna.map((el, i) => (
                 <div dir="rtl" key={i} className="item">
-                  <h2>{el.arab}</h2>
+                  <h2>
+                    {el.arab}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>{el.urutan}</small>
+                  </h2>
+                  <p dir="ltr" className="latin">
+                    {el.latin}
+                  </p>
                   <p dir="ltr">{el.arti}</p>
                 </div>
               ))

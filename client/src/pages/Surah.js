@@ -26,6 +26,7 @@ export default function Quran() {
           <div dir="rtl" className="head-table">
             <h4>No</h4>
             <h4>Surat</h4>
+            <h4>Latin</h4>
             <h4>Arti</h4>
             <h4>Ayat</h4>
             <h4>Tipe</h4>
@@ -36,6 +37,7 @@ export default function Quran() {
                   key={i}
                   nomor={el.nomor}
                   surat={el.asma}
+                  nama={el.nama}
                   arti={el.arti}
                   ayat={el.ayat}
                   tipe={el.type}

@@ -55,7 +55,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .surah-container .container .list-surah .head-table h4 {
@@ -73,7 +73,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .surah-container .container .list-surah .surah h4 {
@@ -89,9 +89,13 @@
   margin: 0;
 }
 
-@media screen and(min-width: 320px) and(max-width: 840px) {
+@media only screen and (min-width: 320px) and (max-width: 840px) {
+  .surah-container .container .list-surah .head-table h4 {
+    font-size: 1rem;
+  }
+
   .surah-container .container .list-surah .surah h4 {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
   .surah-container .container .list-surah .surah .nomor {

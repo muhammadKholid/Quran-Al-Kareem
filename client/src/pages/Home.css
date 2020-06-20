@@ -156,7 +156,7 @@
 
   .App .container .sub-container .header .header-title h2 {
     margin: 2vh 0;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     width: 44vw;
   }
 
@@ -170,12 +170,13 @@
     position: absolute;
     right: 0;
     border-right: 2px solid var(--dark);
+    word-wrap: normal;
   }
 
   .App .schedule {
     padding: 0.5rem;
     border-radius: 12px;
-    width: 13vw;
+    width: 16vw;
     height: 8vh;
     color: var(--white);
   }
@@ -187,6 +188,7 @@
 
   .App .schedule p {
     margin: 0;
+    padding: 0;
     font-size: 0.9rem;
   }
 
@@ -195,6 +197,7 @@
     top: 20vh;
     width: 30vw;
     height: auto;
+    word-wrap: break-word;
   }
   .App .container .sub-container .header .random h2,
   .mean {

@@ -9,6 +9,7 @@ export default function List(props) {
       <div dir="rtl" className="surah">
         <h4 className="nomor">{props.nomor}</h4>
         <h4>{props.surat}</h4>
+        <h4>{props.nama}</h4>
         <h4 className="nomor">{props.arti}</h4>
         <h4 className="nomor">{props.ayat}</h4>
         <h4 className="nomor">{props.tipe}</h4>
