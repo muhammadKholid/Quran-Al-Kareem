@@ -9,6 +9,7 @@ import Home from "./pages/Home"
 import Quran from "./pages/Quran"
 import Surah from "./pages/Surah"
 import Asma from "./pages/99"
+import Search from "./pages/Search"
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/asmaul-husna">
             <Asma />
+          </Route>
+          <Route path="/search">
+            <Search />
           </Route>
         </Switch>
       </Router>

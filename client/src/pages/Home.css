@@ -51,7 +51,7 @@
 .App .schedule {
   padding: 1rem;
   border-radius: 12px;
-  width: 7vw;
+  width: 10vw;
   height: 8vh;
   color: var(--white);
 }
@@ -61,8 +61,9 @@
   font-size: 1rem;
 }
 
-.App .schedule p {
+.App .schedule .waktu {
   margin: 0;
+  padding: 0;
   font-size: 1.1rem;
 }
 
@@ -102,6 +103,73 @@
   justify-items: center;
 }
 
+.row .row-search {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  margin: 1.5rem 2rem 1rem 2rem;
+  background-color: var(--light-orange);
+  height: 15vh;
+  border-radius: 45px;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
+
+.row .row-search:hover {
+  color: var(--light-orange);
+}
+
+.row .row-search h1 {
+  text-align: center;
+  transition: all 0.4s ease;
+  padding-top: 1.4rem;
+}
+
+.row .row-search .search-content {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 15vh;
+  width: 100%;
+  border-radius: 45px;
+  display: none;
+  grid-template-columns: 2fr 2fr 0.7fr;
+  grid-gap: 1rem;
+  justify-items: center;
+  animation: search 0.4s ease;
+}
+
+@keyframes search {
+  0% {
+    opacity: 0;
+  }
+}
+
+.row .row-search:hover .search-content {
+  display: grid;
+}
+
+.row .search-content input,
+.src-img {
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.row .search-content input {
+  height: 7vh;
+  width: 34vw;
+  border: 0;
+  border-radius: 32px;
+  background-color: #f5f5f5;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+.row .search-content .src-img {
+  display: block;
+  height: 7vh;
+  width: 7vh;
+  border-radius: 25px;
+}
+
 .row .navigation .item {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   background-color: var(--light-dark);
@@ -138,11 +206,18 @@
 .row .navigation .item .item-title h4 {
   height: 1rem;
   width: auto;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--white);
   animation: galeryText 0.8s ease;
   cursor: pointer;
+}
+
+@keyframes galeryText {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -186,7 +261,7 @@
     font-size: 0.8rem;
   }
 
-  .App .schedule p {
+  .App .schedule .waktu {
     margin: 0;
     padding: 0;
     font-size: 0.9rem;
@@ -215,6 +290,75 @@
     width: 100%;
     top: 65%;
     min-height: 45vh;
+  }
+
+  .row .row-search {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    margin: 1.5rem 2rem 1rem 2rem;
+    background-color: var(--light-orange);
+    height: 7vh;
+    border-radius: 45px;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .row .row-search:hover {
+    color: var(--light-orange);
+  }
+
+  .row .row-search h1 {
+    text-align: center;
+    transition: all 0.4s ease;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .row .row-search .search-content {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 7vh;
+    width: 100%;
+    border-radius: 45px;
+    display: none;
+    grid-template-columns: 1fr 1fr 0.4fr;
+    grid-gap: 0.2rem;
+    justify-items: center;
+    animation: search 0.4s ease;
+  }
+
+  @keyframes search {
+    0% {
+      opacity: 0;
+    }
+  }
+
+  .row .row-search:hover .search-content {
+    top: 0;
+    display: grid;
+  }
+
+  .row .search-content input,
+  .src-img {
+    margin: 0.59rem 0.5rem 2rem 0.5rem;
+  }
+
+  .row .search-content input {
+    height: 4vh;
+    width: 26vw;
+    border: 0;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+    font-size: 0.7rem;
+    padding-left: 0.5rem;
+  }
+
+  .row .search-content .src-img {
+    display: block;
+    height: 4vh;
+    width: 4vh;
+    border-radius: 25px;
   }
 
   .row .navigation {
