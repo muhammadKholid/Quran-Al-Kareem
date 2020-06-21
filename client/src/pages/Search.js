@@ -14,12 +14,13 @@ export default function Search() {
           <div className="content">
             <div className="question">
               <p>
-                Hasil pencarian ayat {oneAyah.ayahKe} dari surat ke {oneAyah.suratKe}{" "}
-                surat {oneAyah.namaSurat} :
+                Hasil pencarian QS {oneAyah.suratKe}:{oneAyah.ayahKe}, surat{" "}
+                {oneAyah.namaSurat} :
               </p>
             </div>
-            <h2 dir="rtl" className="search-result">
+            <h2 dir="rtl" className="search-result ayat">
               {oneAyah.ayah}
+              &nbsp;&nbsp;<small>{oneAyah.ayahKe}</small>
             </h2>
             <h2 className="search-result">{oneAyah.arti}</h2>
           </div>

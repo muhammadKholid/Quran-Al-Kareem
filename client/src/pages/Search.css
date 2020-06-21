@@ -19,29 +19,49 @@
   justify-content: center;
   /* cenering vertically */
   align-items: center;
+  width: 100%;
 }
 
 .search-page .container {
   margin: 0;
-  padding: 2rem;
+  padding: 4vw;
+  width: 100%;
 }
 
 .search-page .container .content {
   background-color: var(--light-orange);
   border-radius: 20px;
+  width: 100%;
 }
 
 .search-page .container .content .question {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
+  height: 12vw;
+  padding: 3vw;
+  align-content: center;
 }
 
 .search-page .container .content .question p {
   color: var(--light-orange);
-  padding: 1.8rem;
+  padding: 3vw;
+  font-size: 4vw;
 }
 
 .search-page .container .content .search-result {
   margin: 0;
   padding: 2rem;
+  font-size: 5vw;
+}
+
+.search-page .container .content .ayat {
+  font-family: "Amiri";
+  font-size: 6vw;
+}
+
+.search-page .container .content .search-result small {
+  border: 2px solid black;
+  padding: 0.2rem;
+  width: 3vw;
+  border-radius: 25px;
+  font-size: 4vw;
 }

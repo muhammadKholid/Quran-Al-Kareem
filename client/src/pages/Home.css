@@ -30,7 +30,7 @@
 .App .container .sub-container .header .header-title h2 {
   margin: 2vh 0;
   border-bottom: 2px solid var(--dark);
-  font-size: 2.3rem;
+  font-size: 2.8vw;
   width: 22vw;
 }
 
@@ -58,13 +58,13 @@
 
 .App .schedule h2 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 2vw;
 }
 
 .App .schedule .waktu {
   margin: 0;
   padding: 0;
-  font-size: 1.1rem;
+  font-size: 2vw;
 }
 
 .App .container .sub-container .header .random {
@@ -80,7 +80,7 @@
 .mean {
   margin: 0 0 0.5rem 0;
   color: var(--white);
-  font-size: 1.8rem;
+  font-size: 3vw;
 }
 
 .row {
@@ -119,6 +119,7 @@
 }
 
 .row .row-search h1 {
+  font-size: 3.4vw;
   text-align: center;
   transition: all 0.4s ease;
   padding-top: 1.4rem;
@@ -168,6 +169,7 @@
   height: 7vh;
   width: 7vh;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 .row .navigation .item {
@@ -204,7 +206,7 @@
 }
 
 .row .navigation .item .item-title h4 {
-  height: 1rem;
+  height: 2vw;
   width: auto;
   font-size: 1.5rem;
   font-weight: 700;
@@ -231,7 +233,7 @@
 
   .App .container .sub-container .header .header-title h2 {
     margin: 2vh 0;
-    font-size: 1.4rem;
+    font-size: 5.7vw;
     width: 44vw;
   }
 
@@ -242,6 +244,7 @@
 
   .adzanSchedule {
     width: 20vw;
+    height: 79vw;
     position: absolute;
     right: 0;
     border-right: 2px solid var(--dark);
@@ -252,19 +255,19 @@
     padding: 0.5rem;
     border-radius: 12px;
     width: 16vw;
-    height: 8vh;
+    height: 11vw;
     color: var(--white);
   }
 
   .App .schedule h2 {
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 4vw;
   }
 
   .App .schedule .waktu {
     margin: 0;
     padding: 0;
-    font-size: 0.9rem;
+    font-size: 3.8vw;
   }
 
   .App .container .sub-container .header .random {
@@ -278,7 +281,7 @@
   .mean {
     margin: 0;
     color: var(--white);
-    font-size: 1.1rem;
+    font-size: 4vw;
   }
 
   .row {
@@ -311,7 +314,7 @@
     text-align: center;
     transition: all 0.4s ease;
     padding-top: 0.7rem;
-    font-size: 1rem;
+    font-size: 4vw;
   }
 
   .row .row-search .search-content {
@@ -373,8 +376,8 @@
   .row .navigation .item {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     background-color: var(--light-dark);
-    width: 23vh;
-    height: 23vh;
+    width: 33vw;
+    height: 33vw;
     position: relative;
     border-radius: 12px;
   }
@@ -404,9 +407,9 @@
   }
 
   .row .navigation .item .item-title h4 {
-    height: 1rem;
+    height: 1vw;
     width: auto;
-    font-size: 1rem;
+    font-size: 3vw;
     font-weight: 700;
     color: var(--white);
     animation: galeryText 0.8s ease;

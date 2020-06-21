@@ -89,17 +89,23 @@
   margin: 0;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 840px) {
+@media only screen and (min-width: 300px) and (max-width: 840px) {
+  .surah-container .container .list-surah .title h4 {
+    font-family: "Quran Standard";
+    margin: 1rem 1rem;
+    font-size: 5vw;
+  }
+
   .surah-container .container .list-surah .head-table h4 {
-    font-size: 1rem;
+    font-size: 3vw;
   }
 
   .surah-container .container .list-surah .surah h4 {
-    font-size: 0.6rem;
+    font-size: 2vw;
   }
 
   .surah-container .container .list-surah .surah .nomor {
     font-weight: 500;
-    font-size: 0.6rem;
+    font-size: 2vw;
   }
 }
