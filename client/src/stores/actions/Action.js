@@ -100,8 +100,11 @@ export const getOneAyah = (ayah, surah) => {
       .then((res) => res.json())
       .then((oneAyah) => {
         const ayah = oneAyah.ayat.data.ar[0].teks
+        const ayahKe = oneAyah.ayat.data.ar[0].ayat
         const arti = oneAyah.ayat.data.id[0].teks
-        const dataAyah = { ayah, arti }
+        const namaSurat = oneAyah.surat.nama
+        const suratKe = oneAyah.surat.nomor
+        const dataAyah = { ayah, arti, ayahKe, namaSurat, suratKe }
         console.log(dataAyah)
         dispatch({
           type: GET_ONE_AYAH,

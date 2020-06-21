@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
-import { getAdzanSchedule, getAsmaulHusna } from "../stores/actions/Action"
+import {
+  getAdzanSchedule,
+  getAsmaulHusna,
+  getOneAyah,
+} from "../stores/actions/Action"
 
 import "./Home.css"
 
@@ -13,8 +17,15 @@ import asmaul from "../assets/Islamic_Wall_Decal_Art_of_Surah_Ikhlas_in_Square_K
 export default function Home() {
   const [loading] = useState("loading")
   const [rundomNumber, setRundomNumber] = useState(0)
+  const [ayat, setAyat] = useState(0)
+  const [surat, setSurat] = useState(0)
+
   const dispatch = useDispatch()
-  const { adzanSchedule, asmaulHusna } = useSelector((state) => state.Reducer)
+  const history = useHistory()
+
+  const { adzanSchedule, asmaulHusna, oneAyah } = useSelector(
+    (state) => state.Reducer
+  )
 
   function getNumber() {
     const generateNumber = Math.floor(Math.random() * 99)
@@ -25,6 +36,12 @@ export default function Home() {
     dispatch(getAsmaulHusna())
     dispatch(getAdzanSchedule())
     setRundomNumber(getNumber())
+  }
+
+  function getSearch(e) {
+    e.preventDefault()
+    dispatch(getOneAyah(ayat, surat))
+    history.push("/search")
   }
 
   useEffect(() => {
@@ -76,14 +93,29 @@ export default function Home() {
             <h1>Mencari Ayat Al-Quran?</h1>
             <div className="search-content">
               <div className="input">
-                <input type="number" placeholder="Surat ke berapa?" />
+                <input
+                  type="number"
+                  onChange={(e) => setSurat(e.target.value)}
+                  placeholder="Surat ke berapa?"
+                />
               </div>
               <div className="input">
-                <input type="number" placeholder="Ayat ke berapa?" />
+                <input
+                  type="number"
+                  onChange={(e) => setAyat(e.target.value)}
+                  placeholder="Ayat ke berapa?"
+                />
               </div>
-              <div className="input">
-                <img className="src-img" src={searching} alt="searching" />
-              </div>
+              <Link to="/search">
+                <div className="input">
+                  <img
+                    className="src-img"
+                    onClick={getSearch}
+                    src={searching}
+                    alt="searching"
+                  />
+                </div>
+              </Link>
             </div>
           </div>
           <div className="navigation">
