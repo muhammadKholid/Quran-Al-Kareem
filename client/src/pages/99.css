@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
-@import url(//db.onlinewebfonts.com/c/f4c0d87f5d87871985ef7c13105fd688?family=Quran + Standard);
 
 :root {
   --dark: #222831;
@@ -36,6 +35,10 @@
   border-radius: 22px;
 }
 
+.asmaul-container .container .title h2 {
+  font-family: "Amiri";
+}
+
 .asmaul-container .container .sub-container {
   padding: 1rem;
   margin: 0;
@@ -54,11 +57,11 @@
 .asmaul-container .container .sub-container .item h2 {
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--light-orange);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-family: "Amiri";
 }
 
 .asmaul-container .container .sub-container .item h2 small {
-  background-color: rgba(0, 0, 0, 0.8);
   color: var(--light-orange);
   font-size: 0.9rem;
 }

@@ -59,7 +59,6 @@ export const getRandomAyah = () => {
         const ayah = randomAyah.acak.ar.teks
         const arti = randomAyah.acak.id.teks
         const dataAyah = { ayah, arti }
-        console.log(dataAyah)
         dispatch({
           type: GET_RANDOM_AYAH,
           payload: dataAyah,
@@ -105,7 +104,6 @@ export const getOneAyah = (ayah, surah) => {
         const namaSurat = oneAyah.surat.nama
         const suratKe = oneAyah.surat.nomor
         const dataAyah = { ayah, arti, ayahKe, namaSurat, suratKe }
-        console.log(dataAyah)
         dispatch({
           type: GET_ONE_AYAH,
           payload: dataAyah,

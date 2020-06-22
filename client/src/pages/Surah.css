@@ -1,4 +1,4 @@
-@import url(//db.onlinewebfonts.com/c/f4c0d87f5d87871985ef7c13105fd688?family=Quran + Standard);
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
 
 :root {
   --dark: #222831;
@@ -33,7 +33,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 4vw;
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--light-orange);
   border-radius: 12px;
@@ -41,7 +41,7 @@
 }
 
 .surah-container .container .list-surah .title h4 {
-  font-family: "Quran Standard";
+  font-family: "Amiri";
   margin: 1rem 1rem;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .surah-container .container .list-surah .surah h4 {
-  font-family: "Quran Standard";
+  font-family: "Amiri";
   font-size: 1.2rem;
   margin: 0;
 }
@@ -91,7 +91,7 @@
 
 @media only screen and (min-width: 300px) and (max-width: 840px) {
   .surah-container .container .list-surah .title h4 {
-    font-family: "Quran Standard";
+    font-family: "Amiri";
     margin: 1rem 1rem;
     font-size: 5vw;
   }
@@ -101,11 +101,11 @@
   }
 
   .surah-container .container .list-surah .surah h4 {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 
   .surah-container .container .list-surah .surah .nomor {
     font-weight: 500;
-    font-size: 2vw;
+    font-size: 3vw;
   }
 }

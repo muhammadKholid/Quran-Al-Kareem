@@ -18,7 +18,7 @@ export default function AsmaulHusna() {
     <div className="asmaul-container">
       <div className="container">
         <div className="title">
-          <h2> بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْ</h2>
+          <h2>نَسْأَلُكَ يَامَنْ هُوَ اللهُ الَّذِيْ لآَ إِلَهَ إِلّاَ هُوَ</h2>
         </div>
         <div dir="rtl" className="sub-container">
           {asmaulHusna
