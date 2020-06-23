@@ -134,6 +134,14 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="footer">
+            <h4 className="footer-text">
+              Copyright @2020 All rights reserved | made by{" "}
+              <a href="https://github.com/muhammadKholid/Quran-Al-Kareem">
+                Muhammad Kholid
+              </a>
+            </h4>
+          </div>
         </div>
       </div>
     </div>

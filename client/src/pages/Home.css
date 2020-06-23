@@ -214,6 +214,33 @@
   cursor: pointer;
 }
 
+.row .footer {
+  height: 9vw;
+  width: auto;
+  font-size: 3vw;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row .footer .footer-text {
+  height: 2vw;
+  width: auto;
+  font-size: 2vw;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.row .footer .footer-text a {
+  height: 2vw;
+  width: auto;
+  font-size: 2vw;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--light-orange);
+}
+
 @keyframes galeryText {
   0% {
     transform: translateY(-20px);
