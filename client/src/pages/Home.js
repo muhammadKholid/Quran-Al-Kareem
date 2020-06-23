@@ -23,9 +23,7 @@ export default function Home() {
   const dispatch = useDispatch()
   const history = useHistory()
 
-  const { adzanSchedule, asmaulHusna, oneAyah } = useSelector(
-    (state) => state.Reducer
-  )
+  const { adzanSchedule, asmaulHusna } = useSelector((state) => state.Reducer)
 
   function getNumber() {
     const generateNumber = Math.floor(Math.random() * 99)

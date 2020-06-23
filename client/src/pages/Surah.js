@@ -9,9 +9,15 @@ import "./Surah.css"
 
 export default function Quran() {
   const [loading] = useState("Loading")
+  const [input, setInput] = useState("")
   // const [inputs, setInput] = useState([])
   const { allSurah } = useSelector((state) => state.Reducer)
   const dispatch = useDispatch()
+  const searchResults = !input
+    ? allSurah
+    : allSurah.filter((surah) => {
+        return surah.nama.toLowerCase().includes(input.toLowerCase())
+      })
 
   //speech to text recognation
   // const SpeechRecognition =
@@ -23,6 +29,11 @@ export default function Quran() {
     dispatch(getAllSurah())
   }, [dispatch])
 
+  function findSurah(e) {
+    const input = e.target.value
+    setInput(input)
+  }
+
   // function handleClick(e) {
   //   recognition.start()
   //   recognition.onresult = (e) => {
@@ -33,6 +44,7 @@ export default function Quran() {
   //     setInput([...upperCase])
   //   }
   // }
+  //
 
   return (
     <div className="surah-container">
@@ -51,27 +63,29 @@ export default function Quran() {
           {/*   </div> */}
           {/* </div> */}
 
-          <div dir="rtl" className="head-table">
-            <h4>No</h4>
-            <h4>Surat</h4>
-            <h4>Latin</h4>
-            <h4>Arti</h4>
-            <h4>Ayat</h4>
-            <h4>Tipe</h4>
+          <div className="head-table">
+            <input
+              type="text"
+              placeholder="Hari ini mau membaca surat apa?"
+              onChange={findSurah}
+            />
           </div>
-          {allSurah
-            ? allSurah.map((el, i) => (
-                <List
-                  key={i}
-                  nomor={el.nomor}
-                  surat={el.asma}
-                  nama={el.nama}
-                  arti={el.arti}
-                  ayat={el.ayat}
-                  tipe={el.type}
-                />
-              ))
-            : loading}
+          {searchResults ? (
+            searchResults.map((el, i) => (
+              <List
+                key={i}
+                nomor={el.nomor}
+                surat={el.asma}
+                nama={el.nama}
+                arti={el.arti}
+                ayat={el.ayat}
+                tipe={el.type}
+                audio={el.audio}
+              />
+            ))
+          ) : (
+            <div className="loader">loading</div>
+          )}
         </div>
       </div>
     </div>
